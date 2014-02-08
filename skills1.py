@@ -2,11 +2,23 @@
 
 # Write a function that takes a list and returns a new list with only the odd numbers.
 def all_odd(some_list):
-    return some_list[1::2]
+    
+    x = 0
+    for i in some_list:
+        if some_list[x] % 2 == 0:
+            del some_list[x]
+        x =x + 1
+    return some_list
 
 # Write a function that takes a list and returns a new list with only the even numbers.
 def all_even(some_list):
-    return some_list[0::2]
+    x = 0
+    print some_list
+    for i in some_list:
+        if some_list[x] % 2 != 0:
+           del some_list[x]
+        x =x + 1
+    return some_list
 
 # Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
 def long_words(word_list):
@@ -43,3 +55,15 @@ def join_strings(string_list):
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(numbers):
     return None
+
+# Get only odd numbers from the list
+mixedlist = [1,2,4,6,7,8,0]
+result = all_odd(mixedlist)
+print mixedlist
+print "The odd numbers are : %s" % result
+
+
+# # Get only even numbers from the list
+# mixedlist = [1,3,5,7]
+# result = all_even(mixedlist)
+# print "The even numbers are : %s" % result
