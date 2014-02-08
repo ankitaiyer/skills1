@@ -4,21 +4,22 @@
 def all_odd(some_list):
     
     x = 0
-    for i in some_list:
-        if some_list[x] % 2 == 0:
-            del some_list[x]
-        x =x + 1
-    return some_list
-
-# Write a function that takes a list and returns a new list with only the even numbers.
-def all_even(some_list):
-    x = 0
-    print some_list
+    oddlist = []
     for i in some_list:
         if some_list[x] % 2 != 0:
-           del some_list[x]
-        x =x + 1
-    return some_list
+            oddlist.append(some_list[x])
+        x = x + 1
+    return oddlist    
+
+# # Write a function that takes a list and returns a new list with only the even numbers.
+def all_even(some_list):
+    x = 0
+    oddlist = []
+    for i in some_list:
+        if some_list[x] % 2 == 0:
+            oddlist.append(some_list[x])
+        x = x + 1
+    return oddlist    
 
 # Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
 def long_words(word_list):
@@ -57,13 +58,13 @@ def average(numbers):
     return None
 
 # Get only odd numbers from the list
-mixedlist = [1,2,4,6,7,8,0]
-result = all_odd(mixedlist)
-print mixedlist
-print "The odd numbers are : %s" % result
+mixedlist = [12.0, 11.0]
+a = all_odd(mixedlist)
+print "odd numbers are %s " % a
+
+# Get only odd numbers from the list
+mixedlist = [20.0, 13.0]
+a = all_even(mixedlist)
+print "Even numbers are %s " % a
 
 
-# # Get only even numbers from the list
-# mixedlist = [1,3,5,7]
-# result = all_even(mixedlist)
-# print "The even numbers are : %s" % result
