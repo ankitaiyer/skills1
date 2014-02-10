@@ -23,15 +23,37 @@ def all_even(some_list):
 
 # Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
 def long_words(word_list):
-    return []
+    x = 0
+    fourletterwords = []
+    word = " "
+    for i in word_list:
+        word = word_list[x]
+        if len(word) >= 4:
+            fourletterwords.append(word_list[x])
+        x = x + 1
+    return fourletterwords
+    
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(some_list):
-    return None
+    x = 0
+    smallest = some_list[x]
+    for i in some_list:
+        if some_list [x] < smallest:
+            smallest = some_list[x]
+        x = x + 1
+    return smallest
+
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(some_list):
-    return None
+    x = 0
+    largest = some_list[x]
+    for i in some_list:
+        if some_list [x] > largest:
+            largest = some_list[x]
+        x = x + 1
+    return largest
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(some_list):
@@ -57,14 +79,39 @@ def join_strings(string_list):
 def average(numbers):
     return None
 
-# Get only odd numbers from the list
-mixedlist = [12.0, 11.0]
+
+# Get only odd numbers from the given list
+mixedlist = [12, 566, 987, 1,0, 21,99,2]
+print "------------------------"
+print "Original list is %s " % mixedlist
 a = all_odd(mixedlist)
 print "odd numbers are %s " % a
+print "------------------------"
 
-# Get only odd numbers from the list
-mixedlist = [20.0, 13.0]
+# Get only odd numbers from the given list
+mixedlist = [12, 566, 987, 1,0, 21,99,2]
+print "Original list is %s " % mixedlist
 a = all_even(mixedlist)
 print "Even numbers are %s " % a
+print "------------------------"
 
+# Get strings that are 4 letter or longer from the given list
+mixedwordslist = ["This" , "list" ,"contains" ,"few" ,"words" ,"that" ,"are" ,"longer" ,"than", "4", "words"]
+print "Original list is %s " % mixedwordslist
+a = long_words(mixedwordslist)
+print "four or longer letter words are %s" % a
+print "------------------------"
 
+# Find the smallest integer from the given list
+integerslist = [3,6,1,-2,7]
+print "Original list is %s " % integerslist
+a = smallest(integerslist)
+print "Smallest number from the list is %d" % a
+print "------------------------"
+
+# Find the largest integer from the given list
+integerslist = [3,6,1,-2,7]
+print "Original list is %s " % integerslist
+a = largest(integerslist)
+print "Largest number from the list is %d" % a
+print "------------------------"
